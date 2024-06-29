@@ -2,6 +2,7 @@
 
 import { SignInButton, UserButton } from "@clerk/nextjs"
 import { AuthLoading, Authenticated, Unauthenticated } from "convex/react"
+import { Loader2 } from "lucide-react"
 
 const HeaderActions = () => {
   return (
@@ -13,7 +14,7 @@ const HeaderActions = () => {
         <UserButton />
       </Authenticated>
       <AuthLoading>
-        Loading...
+         <Loader2 className="animate-spin" />
       </AuthLoading>
     </>
   )
